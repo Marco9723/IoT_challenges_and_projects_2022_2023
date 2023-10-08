@@ -1,0 +1,740 @@
+********************************************
+*                                          *
+*             TOSSIM Script                *
+*                                          *
+********************************************
+Initializing mac....
+Initializing radio channels....
+    using topology file: topology.txt
+    using noise file: meyer-heavy.txt
+Initializing simulator....
+Activate debug message on channel boot
+Activate debug message on channel timer
+Activate debug message on channel radio
+Activate debug message on channel connect
+Activate debug message on channel subscribe
+Activate debug message on channel publish
+Creating node 1 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 2 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 3 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 4 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 5 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 6 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 7 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 8 - CLIENT
+>>>Will boot at time 0 [sec]
+Creating node 9 - PAN COORD
+>>>Will boot at time 0 [sec]
+Creating radio channels...
+>>>Setting radio channel from node  9  to node  1  with gain  -60.0  dBm
+>>>Setting radio channel from node  1  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  2  with gain  -60.0  dBm
+>>>Setting radio channel from node  2  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  3  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  5  with gain  -60.0  dBm
+>>>Setting radio channel from node  5  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  6  with gain  -60.0  dBm
+>>>Setting radio channel from node  6  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  7  with gain  -60.0  dBm
+>>>Setting radio channel from node  7  to node  9  with gain  -60.0  dBm
+>>>Setting radio channel from node  9  to node  8  with gain  -60.0  dBm
+>>>Setting radio channel from node  8  to node  9  with gain  -60.0  dBm
+Initializing Closest Pattern Matching (CPM)...
+Reading noise model data file: meyer-heavy.txt
+Loading:##Done!
+>>>Creating noise model for node: 1
+>>>Creating noise model for node: 2
+>>>Creating noise model for node: 3
+>>>Creating noise model for node: 4
+>>>Creating noise model for node: 5
+>>>Creating noise model for node: 6
+>>>Creating noise model for node: 7
+>>>Creating noise model for node: 8
+>>>Creating noise model for node: 9
+Start simulation with TOSSIM! 
+
+
+
+DEBUG (8): CLIENT 8 trying to CONNECT to PANC
+DEBUG (1): CLIENT 1 trying to CONNECT to PANC
+DEBUG (6): CLIENT 6 trying to CONNECT to PANC
+DEBUG (4): CLIENT 4 trying to CONNECT to PANC
+DEBUG (7): CLIENT 7 trying to CONNECT to PANC
+DEBUG (5): CLIENT 5 trying to CONNECT to PANC
+DEBUG (3): CLIENT 3 trying to CONNECT to PANC
+DEBUG (2): CLIENT 2 trying to CONNECT to PANC
+DEBUG (9): PAN receiving CONNECT from 8
+DEBUG (9): PAN receiving CONNECT from 5
+DEBUG (9): PAN receiving CONNECT from 6
+DEBUG (9): PAN receiving CONNECT from 3
+DEBUG (8): CLIENT 8 receiving CONNACK from PAN
+DEBUG (5): CLIENT 5 receiving CONNACK from PAN
+DEBUG (6): CLIENT 6 receiving CONNACK from PAN
+DEBUG (3): CLIENT 3 receiving CONNACK from PAN
+DEBUG (2): CLIENT 2 trying to CONNECT to PANC
+DEBUG (1): CLIENT 1 trying to CONNECT to PANC
+DEBUG (7): CLIENT 7 trying to CONNECT to PANC
+DEBUG (4): CLIENT 4 trying to CONNECT to PANC
+DEBUG (9): PAN receiving CONNECT from 7
+DEBUG (9): PAN receiving CONNECT from 1
+DEBUG (9): PAN receiving CONNECT from 4
+DEBUG (9): PAN receiving CONNECT from 2
+DEBUG (7): CLIENT 7 receiving CONNACK from PAN
+DEBUG (1): CLIENT 1 receiving CONNACK from PAN
+DEBUG (4): CLIENT 4 receiving CONNACK from PAN
+DEBUG (2): CLIENT 2 receiving CONNACK from PAN
+DEBUG (3): CLIENT 3 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (5): CLIENT 5 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (8): CLIENT 8 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (6): CLIENT 6 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (1): CLIENT 1 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (2): CLIENT 2 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (7): CLIENT 7 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (4): CLIENT 4 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (9): PAN receiving SUBSCRIBE from 7 for topic LUMINOSITY 
+DEBUG (9): PAN receiving SUBSCRIBE from 2 for topic TEMPERATURE 
+DEBUG (9): PAN receiving SUBSCRIBE from 1 for topic TEMPERATURE 
+DEBUG (9): PAN receiving SUBSCRIBE from 4 for topic HUMIDITY 
+DEBUG (7): CLIENT 7 receiving SUBACK 
+DEBUG (7): CLIENT 7 is now subscribed on topic LUMINOSITY 
+DEBUG (2): CLIENT 2 receiving SUBACK 
+DEBUG (2): CLIENT 2 is now subscribed on topic TEMPERATURE 
+DEBUG (1): CLIENT 1 receiving SUBACK 
+DEBUG (1): CLIENT 1 is now subscribed on topic TEMPERATURE 
+DEBUG (4): CLIENT 4 receiving SUBACK 
+DEBUG (4): CLIENT 4 is now subscribed on topic HUMIDITY 
+DEBUG (5): CLIENT 5 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (8): CLIENT 8 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (6): CLIENT 6 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (3): CLIENT 3 sending SUBSCRIBE on TEMPERATURE to PAN
+DEBUG (9): PAN receiving SUBSCRIBE from 3 for topic TEMPERATURE 
+DEBUG (9): PAN receiving SUBSCRIBE from 6 for topic TEMPERATURE 
+DEBUG (9): PAN receiving SUBSCRIBE from 8 for topic TEMPERATURE 
+DEBUG (9): PAN receiving SUBSCRIBE from 5 for topic TEMPERATURE 
+DEBUG (3): CLIENT 3 receiving SUBACK 
+DEBUG (3): CLIENT 3 is now subscribed on topic TEMPERATURE 
+DEBUG (6): CLIENT 6 receiving SUBACK 
+DEBUG (6): CLIENT 6 is now subscribed on topic TEMPERATURE 
+DEBUG (8): CLIENT 8 receiving SUBACK 
+DEBUG (8): CLIENT 8 is now subscribed on topic TEMPERATURE 
+DEBUG (5): CLIENT 5 receiving SUBACK 
+DEBUG (5): CLIENT 5 is now subscribed on topic TEMPERATURE 
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 51
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 69
+DEBUG (4): CLIENT 4 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (1): CLIENT 1 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 51 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 51 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 51 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 51 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 51 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 51 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 69 to CLIENT 4
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 51 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 51 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 51 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 51 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 51 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 51 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 69 
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 86
+DEBUG (8): CLIENT 8 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 34
+DEBUG (5): CLIENT 5 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 34 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN receiving SUBSCRIBE from 5 for topic HUMIDITY 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 34 
+DEBUG (5): CLIENT 5 receiving SUBACK 
+DEBUG (5): CLIENT 5 is now subscribed on topic HUMIDITY 
+DEBUG (4): CLIENT 4 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 72
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 66
+DEBUG (1): CLIENT 1 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 66 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 66 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 66 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 66 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 66 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 66 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN receiving SUBSCRIBE from 4 for topic LUMINOSITY 
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 72 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 72 to CLIENT 5
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN receiving SUBSCRIBE from 1 for topic HUMIDITY 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 66 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 66 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 66 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 66 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 66 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 66 
+DEBUG (4): CLIENT 4 receiving SUBACK 
+DEBUG (4): CLIENT 4 is now subscribed on topic LUMINOSITY 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 72 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 72 
+DEBUG (1): CLIENT 1 receiving SUBACK 
+DEBUG (1): CLIENT 1 is now subscribed on topic HUMIDITY 
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 58
+DEBUG (5): CLIENT 5 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (8): CLIENT 8 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 80
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 80 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 80 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 58 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 58 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 58 to CLIENT 5
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 80 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 80 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 58 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 58 
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 5
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 87
+DEBUG (1): CLIENT 1 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 6
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 5
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 53
+DEBUG (5): CLIENT 5 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 40
+DEBUG (8): CLIENT 8 sending SUBSCRIBE on HUMIDITY to PAN
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 40 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 40 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 40 to CLIENT 5
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN receiving SUBSCRIBE from 8 for topic HUMIDITY 
+DEBUG (9): PAN receiving SUBSCRIBE from 5 for topic LUMINOSITY 
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 53 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 53 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 53 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 40 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 40 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 40 
+DEBUG (8): CLIENT 8 receiving SUBACK 
+DEBUG (8): CLIENT 8 is now subscribed on topic HUMIDITY 
+DEBUG (5): CLIENT 5 receiving SUBACK 
+DEBUG (5): CLIENT 5 is now subscribed on topic LUMINOSITY 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 53 
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 20
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 100
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 31
+DEBUG (1): CLIENT 1 sending SUBSCRIBE on LUMINOSITY to PAN
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 20 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 20 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 20 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 20 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 20 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 20 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 100 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 100 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 100 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 100 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN receiving SUBSCRIBE from 1 for topic LUMINOSITY 
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 31 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 31 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 31 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 31 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 31 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 31 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 53 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 53 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 20 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 20 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 20 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 20 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 20 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 20 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 100 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 100 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 100 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 100 
+DEBUG (1): CLIENT 1 receiving SUBACK 
+DEBUG (1): CLIENT 1 is now subscribed on topic LUMINOSITY 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 31 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 31 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 31 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 31 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 31 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 31 
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 98
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 81
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 50
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 93
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 93 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 93 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 93 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 93 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 98 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 98 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 98 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 98 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 93 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 93 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 93 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 93 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 98 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 98 
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 20
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 56
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 0
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 67
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 0 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 0 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 0 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 0 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 0 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 0 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 20 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 20 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 20 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 20 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 56 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 56 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 56 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 56 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 56 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 56 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 98 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 98 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 67 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 67 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 67 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 67 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 0 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 0 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 0 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 0 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 0 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 0 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 20 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 20 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 20 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 20 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 56 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 56 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 56 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 56 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 56 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 56 
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 73
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 33
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 33
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 46
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 33 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 33 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 33 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 33 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 73 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 73 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 73 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 73 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 33 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 33 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 33 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 73 
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 40
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 67
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 52
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 25
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 73 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 73 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 73 
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 19
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 72
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 4
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 18
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 4 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 4 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 4 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 4 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 72 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 72 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 72 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 72 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 18 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 18 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 18 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 18 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 4 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 4 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 4 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 72 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 72 
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 100
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 73
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 28
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 67
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 73 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 73 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 73 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 73 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 73 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 73 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 67 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 72 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 72 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 18 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 18 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 18 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 18 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 73 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 73 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 73 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 73 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 73 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 73 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 67 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 67 
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 69
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 0
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 37
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 64
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 37 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 37 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 37 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 37 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 64 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 64 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 64 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 64 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 37 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 37 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 37 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 37 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 64 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 64 
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 60
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 46
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 73
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 55
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 64 
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 46 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 46 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 46 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 46 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 46 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 46 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 60 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 60 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 60 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 60 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 64 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 46 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 46 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 46 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 46 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 46 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 46 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 60 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 60 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 60 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 60 
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 10
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 95
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 36
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 32
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 10 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 10 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 10 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 10 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 36 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 36 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 36 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 36 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 10 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 10 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 10 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 10 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 36 
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 82
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 13
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 54
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 78
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 36 
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 54 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 54 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 54 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 54 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 78 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 78 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 78 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 78 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 78 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 78 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 13 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 13 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 13 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 13 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 13 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 13 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 82 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 82 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 82 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 82 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 36 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 36 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 54 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 54 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 54 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 54 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 78 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 78 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 78 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 78 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 78 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 13 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 13 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 13 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 13 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 13 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 13 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 82 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 82 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 82 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 82 
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 61
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 71
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 19
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 61
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 19 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 19 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 19 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 19 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 61 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 61 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 61 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 61 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 19 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 19 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 19 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 19 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 61 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 61 
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 14
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 5
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 68
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 76
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 76 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 76 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 76 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 76 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 76 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 76 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 68 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 68 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 68 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 68 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 61 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 61 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 76 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 76 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 76 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 76 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 76 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 68 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 68 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 68 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 68 
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 7
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 12
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 23
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 63
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 23 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 23 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 23 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 23 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 7 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 7 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 7 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 7 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 12 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 12 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 12 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 12 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 63 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 63 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 63 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 63 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 23 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 23 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 23 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 23 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 7 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 7 
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 39
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 86
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 24
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 9
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 7 
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 86 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 86 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 86 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 86 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 24 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 24 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 24 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 24 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 24 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 24 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 7 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 12 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 12 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 12 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 12 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 63 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 63 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 63 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 86 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 86 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 86 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 86 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 24 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 24 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 24 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 24 
+DEBUG (6): CLIENT 6 receiving PUBLISH: TOPIC TEMPERATURE, value 24 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC TEMPERATURE, value 24 
+DEBUG (6): CLIENT 6 sending PUBLISH: topic HUMIDITY, value 6
+DEBUG (8): CLIENT 8 sending PUBLISH: topic LUMINOSITY, value 59
+DEBUG (3): CLIENT 3 sending PUBLISH: topic LUMINOSITY, value 70
+DEBUG (5): CLIENT 5 sending PUBLISH: topic LUMINOSITY, value 82
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 70 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 70 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 70 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 70 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 6 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 82 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 82 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 82 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 82 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 59 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 59 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 59 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic LUMINOSITY, value 59 to CLIENT 7
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 70 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 70 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 70 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 70 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (7): CLIENT 7 sending PUBLISH: topic HUMIDITY, value 73
+DEBUG (4): CLIENT 4 sending PUBLISH: topic TEMPERATURE, value 15
+DEBUG (1): CLIENT 1 sending PUBLISH: topic HUMIDITY, value 3
+DEBUG (2): CLIENT 2 sending PUBLISH: topic TEMPERATURE, value 62
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 73 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 73 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 73 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 73 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 62 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 62 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 62 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 62 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 62 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 62 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 15 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 15 to CLIENT 2
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 15 to CLIENT 3
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 15 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 15 to CLIENT 6
+DEBUG (9): PAN forwarding PUBLISH: topic TEMPERATURE, value 15 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 3 to CLIENT 1
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 3 to CLIENT 4
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 3 to CLIENT 5
+DEBUG (9): PAN forwarding PUBLISH: topic HUMIDITY, value 3 to CLIENT 8
+DEBUG (9): PAN sending PUB messages to Node-RED
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 6 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 82 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 82 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 82 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 82 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC LUMINOSITY, value 59 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC LUMINOSITY, value 59 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC LUMINOSITY, value 59 
+DEBUG (7): CLIENT 7 receiving PUBLISH: TOPIC LUMINOSITY, value 59 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC HUMIDITY, value 73 
+DEBUG (4): CLIENT 4 receiving PUBLISH: TOPIC HUMIDITY, value 73 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC HUMIDITY, value 73 
+DEBUG (8): CLIENT 8 receiving PUBLISH: TOPIC HUMIDITY, value 73 
+DEBUG (1): CLIENT 1 receiving PUBLISH: TOPIC TEMPERATURE, value 62 
+DEBUG (2): CLIENT 2 receiving PUBLISH: TOPIC TEMPERATURE, value 62 
+DEBUG (3): CLIENT 3 receiving PUBLISH: TOPIC TEMPERATURE, value 62 
+DEBUG (5): CLIENT 5 receiving PUBLISH: TOPIC TEMPERATURE, value 62
+
+
+
+
+Simulation finished!

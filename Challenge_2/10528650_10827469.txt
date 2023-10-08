@@ -1,0 +1,613 @@
+[
+    {
+        "id": "ae83ba69.a1b688",
+        "type": "tab",
+        "label": "what to do?",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5cf6fc3d.1f3f9c",
+        "type": "mqtt in",
+        "z": "ae83ba69.a1b688",
+        "name": "HIVEMQ Id Reciever",
+        "topic": "polimi/challenge_2/2023/id_code_generator/4",
+        "qos": "2",
+        "broker": "a99ea797.4bdaa",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "34c41e63.b29d1a"
+            ]
+        ]
+    },
+    {
+        "id": "34c41e63.b29d1a",
+        "type": "json",
+        "z": "ae83ba69.a1b688",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "8acb8dd1.04e448"
+            ]
+        ]
+    },
+    {
+        "id": "8acb8dd1.04e448",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "CSV Parser",
+        "func": "// if the ON variable is set to true\nif (flow.get('ON')===true){\n\n    // computing the frame number\n    let master = 8650;\n    id=Number(msg.payload.id);\n    num=(master+id)%7711;\n\n    //read actual flow counter and increase it \n    var counter = flow.get(\"counter\");\n    counter = counter +1;\n\n    //stop working after recieving 100 id messages\n    if(counter>100){\n        flow.set('ON',false);\n        var msg2= {payload: 'END'};\n        return [null,msg2];\n    }\n\n    //update counter,id and frame to flow var\n    flow.set(\"counter\", counter);\n    flow.set(\"id\", id);\n\n    //extract the n-th packet from csv file\n    var csv = flow.get(\"csv\");\n    var packet = [];\n    packet.push({payload:csv[num-1]});\n\n    return [packet];\n\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "d63d7367.6154f"
+            ],
+            [
+                "16cb0a49.3a6ace"
+            ]
+        ],
+        "outputLabels": [
+            "msg",
+            "msg2"
+        ]
+    },
+    {
+        "id": "57f27396.51e8ac",
+        "type": "inject",
+        "z": "ae83ba69.a1b688",
+        "name": "",
+        "topic": "",
+        "payload": "START",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "ee6d8673.581268",
+                "60c95e28.5430c",
+                "16cb0a49.3a6ace"
+            ]
+        ]
+    },
+    {
+        "id": "ee6d8673.581268",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "Reset Variables",
+        "func": "//Boolean variable to start and stop the execution\nflow.set(\"ON\", true)\n\n// to count the messages\nflow.set(\"counter\", 0);\n\n// to set flow id (used in MQTT Publisher)\nflow.set(\"id\", 0);\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "162dcf06.93ae19",
+        "type": "csv",
+        "z": "ae83ba69.a1b688",
+        "name": "CSV Reader",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "No.,Time,Source,Destination,Protocol,Length,Source Port,Destination Port,Info,Message",
+        "skip": "0",
+        "x": 640,
+        "y": 120,
+        "wires": [
+            [
+                "8c93aac9.62df5"
+            ]
+        ]
+    },
+    {
+        "id": "60c95e28.5430c",
+        "type": "file in",
+        "z": "ae83ba69.a1b688",
+        "name": "CSV Input Path",
+        "filename": "/home/user/Desktop/challenge2023_2.csv",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "162dcf06.93ae19"
+            ]
+        ]
+    },
+    {
+        "id": "8c93aac9.62df5",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "CSV Global Setter",
+        "func": "flow.set(\"csv\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 860,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60221711.34cf9",
+        "type": "debug",
+        "z": "ae83ba69.a1b688",
+        "name": "show frame",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1f1de6c3.765089",
+        "type": "inject",
+        "z": "ae83ba69.a1b688",
+        "name": "COUNTER ",
+        "topic": "read counter",
+        "payload": "counter",
+        "payloadType": "flow",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1410,
+        "y": 240,
+        "wires": [
+            [
+                "60221711.34cf9"
+            ]
+        ]
+    },
+    {
+        "id": "d63d7367.6154f",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "Check PUBLISH",
+        "func": "// if the message found contains a Publish Message\nif (msg.payload.Info.includes(\"Publish Message\"))\n{\n    //if the Message contains payload\n    if (msg.payload.hasOwnProperty('Message'))\n    {\n        // extract payload\n        var message = msg.payload.Message;\n        // check if packet contains multiple Publish\n        // extract them and send as an array of payloads (managed by the following 'split' node)\n        var message_replace = message.replace(/},{/gi,\"}}{{\");\n        let splitted = message_replace.split(\"}{\");\n        var newMsg = { payload: splitted };\n        return newMsg;\n\n    }   \n    \n    else {\n        \n        //else send empty payload\n        msg.payload = \"\";\n        return msg;\n        \n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "8ff12c58.ee4f68"
+            ]
+        ]
+    },
+    {
+        "id": "fafdd9a3.b5681",
+        "type": "mqtt out",
+        "z": "ae83ba69.a1b688",
+        "name": "HIVEMQ Sender",
+        "topic": "/polimi/iot2023/challenge2/10528650",
+        "qos": "0",
+        "retain": "",
+        "broker": "779fdf0f.524928",
+        "x": 1650,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a0c90de4.f5b2b8",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "MQTT Publisher",
+        "func": "// create empty object with attributes timestamp, id and payload\nobj = new Object();\n\n// create attribute timestamp\nvar date = new Date(); \nvar option = {month:'2-digit',day:'2-digit',year:\"numeric\",hour:'2-digit',hour12:false,minute:'2-digit',second:'2-digit'}; \nlet timestamp = date.toLocaleString('en-US', option);\n\n//CURRENT_TIMESTAMP\nobj.timestamp = timestamp;\n//PREVIOUS_ID\nobj.id = flow.get(\"id\");\n//MQTT_PUBLISH_PAYLOAD\nobj.payload = msg.payload;\n\n//convert object to json string\nvar payload_new = JSON.stringify(obj);\nmsg.payload = payload_new;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1390,
+        "y": 440,
+        "wires": [
+            [
+                "fafdd9a3.b5681"
+            ]
+        ]
+    },
+    {
+        "id": "4c9d0f4e.437908",
+        "type": "mqtt in",
+        "z": "ae83ba69.a1b688",
+        "name": "HIVEMQ Receiver",
+        "topic": "/polimi/iot2023/challenge2/10528650",
+        "qos": "2",
+        "broker": "393c277c.acd688",
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "5ddb673a.831f28"
+            ]
+        ]
+    },
+    {
+        "id": "58346d81.bd818c",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "Payload-extractor",
+        "func": "// Extract the payload of one single Publish message:\n// if the message has a payload\nif(msg.payload.hasOwnProperty('payload'))\n{\n    // and the message is not empty\n    if ((msg.payload.payload !== \"\"))\n    {\n        var string = msg.payload.payload;\n        msg.payload = string;\n        return msg\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "81640d36.6861a8"
+            ]
+        ]
+    },
+    {
+        "id": "81640d36.6861a8",
+        "type": "json",
+        "z": "ae83ba69.a1b688",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 690,
+        "y": 600,
+        "wires": [
+            [
+                "d687af4c.c0f938"
+            ]
+        ]
+    },
+    {
+        "id": "5ddb673a.831f28",
+        "type": "json",
+        "z": "ae83ba69.a1b688",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 600,
+        "wires": [
+            [
+                "58346d81.bd818c"
+            ]
+        ]
+    },
+    {
+        "id": "d687af4c.c0f938",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "Temperature Unit filter",
+        "func": "//Filter only messages with temperature in Celsius\nif (msg.payload.unit == \"C\")\n{\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 880,
+        "y": 600,
+        "wires": [
+            [
+                "3c12a364.9356b4",
+                "fa2e6455.84554"
+            ]
+        ]
+    },
+    {
+        "id": "fa2e6455.84554",
+        "type": "csv",
+        "z": "ae83ba69.a1b688",
+        "name": "SAVE CSV",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "unit,long,description,lat,range,type",
+        "skip": "0",
+        "x": 1130,
+        "y": 720,
+        "wires": [
+            [
+                "222a5ad3.40b80e"
+            ]
+        ]
+    },
+    {
+        "id": "3c12a364.9356b4",
+        "type": "function",
+        "z": "ae83ba69.a1b688",
+        "name": "Max Temp to CHART",
+        "func": "msg.payload=msg.payload.range[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 600,
+        "wires": [
+            [
+                "323bbcce.b71a3c"
+            ]
+        ]
+    },
+    {
+        "id": "222a5ad3.40b80e",
+        "type": "file",
+        "z": "ae83ba69.a1b688",
+        "name": "CSV Output Path",
+        "filename": "/home/user/Desktop/SAVE.csv",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 1440,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ff12c58.ee4f68",
+        "type": "split",
+        "z": "ae83ba69.a1b688",
+        "name": "Split Multiple PUBLISH",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 1120,
+        "y": 440,
+        "wires": [
+            [
+                "a0c90de4.f5b2b8"
+            ]
+        ]
+    },
+    {
+        "id": "f4fb4c06.779d78",
+        "type": "inject",
+        "z": "ae83ba69.a1b688",
+        "name": "ID",
+        "topic": "read frame",
+        "payload": "id",
+        "payloadType": "flow",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1390,
+        "y": 180,
+        "wires": [
+            [
+                "60221711.34cf9"
+            ]
+        ]
+    },
+    {
+        "id": "16cb0a49.3a6ace",
+        "type": "mqtt out",
+        "z": "ae83ba69.a1b688",
+        "name": "Mosquitto PUB",
+        "topic": "/polimi/iot2023/challenge2/10528650",
+        "qos": "0",
+        "retain": "",
+        "broker": "3de8d85a.473448",
+        "x": 400,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "360abfae.6dd77",
+        "type": "mqtt in",
+        "z": "ae83ba69.a1b688",
+        "name": "Mosquitto SUB",
+        "topic": "/polimi/iot2023/challenge2/10528650",
+        "qos": "2",
+        "broker": "9c35163b.be1008",
+        "x": 1400,
+        "y": 100,
+        "wires": [
+            [
+                "78051e14.efbe38"
+            ]
+        ]
+    },
+    {
+        "id": "323bbcce.b71a3c",
+        "type": "ui_chart",
+        "z": "ae83ba69.a1b688",
+        "name": "",
+        "group": "44fcb118.b2e1b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Max Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "30",
+        "ymax": "60",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1440,
+        "y": 600,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "78051e14.efbe38",
+        "type": "debug",
+        "z": "ae83ba69.a1b688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a99ea797.4bdaa",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "779fdf0f.524928",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "393c277c.acd688",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "3de8d85a.473448",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "9c35163b.be1008",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "44fcb118.b2e1b",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "f1a4c78b.7cfa88",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f1a4c78b.7cfa88",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard"
+    }
+]

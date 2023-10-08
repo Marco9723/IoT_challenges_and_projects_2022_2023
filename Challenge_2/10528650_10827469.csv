@@ -1,0 +1,16 @@
+﻿unit;long;description;lat;range;description2
+C;67;Room Temperature;96;[8,34];temperature
+C;60;Room Temperature;80;[3,45];temperature
+C;69;Room Temperature;100;[7,58];temperature
+C;85;Room Temperature;76;[3,50];temperature
+C;97;Room Temperature;91;[3,50];temperature
+C;61;Room Temperature;72;[5,40];temperature
+C;61;Room Temperature;72;[5,40];temperature
+C;62;Room Temperature;90;[4,45];temperature
+C;75;Room Temperature;66;[1,54];temperature
+C;67;Room Temperature;55;[5,60];temperature
+C;82;Room Temperature;98;[2,33];temperature
+C;47;Room Temperature;80;[7,37];temperature
+C;78;Room Temperature;87;[5,36];temperature
+C;100;Room Temperature;45;[5,59];temperature
+C;80;Room Temperature;86;[0,59];temperature

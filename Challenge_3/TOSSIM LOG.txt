@@ -1,0 +1,247 @@
+********************************************
+*                                          *
+*             TOSSIM Script                *
+*                                          *
+********************************************
+Initializing mac....
+Initializing radio channels....
+    using topology file: topology.txt
+    using noise file: meyer-heavy.txt
+Initializing simulator....
+Activate debug message on channel init
+Activate debug message on channel boot
+Activate debug message on channel timer
+Activate debug message on channel led_0
+Activate debug message on channel radio
+Activate debug message on channel radio_send
+Activate debug message on channel radio_rec
+Activate debug message on channel radio_pack
+Activate debug message on channel msg_gen
+Creating node 1...
+>>>Will boot at time 0 [sec]
+Creating node 2...
+>>>Will boot at time 0 [sec]
+Creating node 3...
+>>>Will boot at time 0 [sec]
+Creating node 4...
+>>>Will boot at time 0 [sec]
+Creating node 5...
+>>>Will boot at time 0 [sec]
+Creating node 6...
+>>>Will boot at time 0 [sec]
+Creating node 7...
+>>>Will boot at time 0 [sec]
+Creating radio channels...
+>>>Setting radio channel from node  1  to node  2  with gain  -60.0  dBm
+>>>Setting radio channel from node  2  to node  1  with gain  -60.0  dBm
+>>>Setting radio channel from node  1  to node  3  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  1  with gain  -60.0  dBm
+>>>Setting radio channel from node  2  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  2  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  5  with gain  -60.0  dBm
+>>>Setting radio channel from node  5  to node  3  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  3  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  6  with gain  -60.0  dBm
+>>>Setting radio channel from node  6  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  5  to node  6  with gain  -60.0  dBm
+>>>Setting radio channel from node  6  to node  5  with gain  -60.0  dBm
+>>>Setting radio channel from node  5  to node  7  with gain  -60.0  dBm
+>>>Setting radio channel from node  7  to node  5  with gain  -60.0  dBm
+>>>Setting radio channel from node  6  to node  7  with gain  -60.0  dBm
+>>>Setting radio channel from node  7  to node  6  with gain  -60.0  dBm
+Initializing Closest Pattern Matching (CPM)...
+Reading noise model data file: meyer-heavy.txt
+Loading:##Done!
+>>>Creating noise model for node: 1
+>>>Creating noise model for node: 2
+>>>Creating noise model for node: 3
+>>>Creating noise model for node: 4
+>>>Creating noise model for node: 5
+>>>Creating noise model for node: 6
+>>>Creating noise model for node: 7
+Start simulation with TOSSIM! 
+
+
+
+DEBUG (1): Application booted.
+DEBUG (7): Application booted.
+DEBUG (3): Application booted.
+DEBUG (6): Application booted.
+DEBUG (2): Application booted.
+DEBUG (5): Application booted.
+DEBUG (4): Application booted.
+DEBUG (7): NODE 7 radio ON!
+DEBUG (7): NODE 7 led STATUS: 000 
+DEBUG (6): NODE 6 radio ON!
+DEBUG (6): NODE 6 led STATUS: 000 
+DEBUG (1): NODE 1 radio ON!
+DEBUG (1): NODE 1 led STATUS: 000 
+DEBUG (3): NODE 3 radio ON!
+DEBUG (3): NODE 3 led STATUS: 000 
+DEBUG (4): NODE 4 radio ON!
+DEBUG (4): NODE 4 led STATUS: 000 
+DEBUG (2): NODE 2 radio ON!
+DEBUG (2): NODE 2 led STATUS: 000 
+DEBUG (5): NODE 5 radio ON!
+DEBUG (5): NODE 5 led STATUS: 000 
+DEBUG (1): timer1 fired for NODE 1
+DEBUG (1): NODE 1 trying to send a DATA msg to destination 7
+DEBUG (1): NODE 1: destination 7 not in ROUTING TABLE 
+DEBUG (1): NODE 1 generating in broadcast a ROUTE_REQ msg
+DEBUG (1): NODE 1 Sending packet to 65535
+DEBUG (3): NODE 3 led index: 1
+DEBUG (3): NODE 3 led STATUS: 010 
+DEBUG (3): NODE 3 receiving REQUEST msg
+DEBUG (3): NODE 3 generating in broadcast a ROUTE_REQ msg
+DEBUG (2): NODE 2 led index: 1
+DEBUG (2): NODE 2 led STATUS: 010 
+DEBUG (2): NODE 2 receiving REQUEST msg
+DEBUG (2): NODE 2 generating in broadcast a ROUTE_REQ msg
+DEBUG (2): NODE 2 Sending packet to 65535
+DEBUG (4): NODE 4 led index: 1
+DEBUG (4): NODE 4 led STATUS: 010 
+DEBUG (4): NODE 4 receiving REQUEST msg
+DEBUG (4): NODE 4 generating in broadcast a ROUTE_REQ msg
+DEBUG (1): NODE 1 led index: 1
+DEBUG (1): NODE 1 led STATUS: 010 
+DEBUG (1): NODE 1 receiving REQUEST msg
+DEBUG (1): NODE 1 generating in broadcast a ROUTE_REQ msg
+DEBUG (3): NODE 3 Sending packet to 65535
+DEBUG (4): NODE 4 led index: 0
+DEBUG (4): NODE 4 led STATUS: 110 
+DEBUG (4): NODE 4 receiving REQUEST msg
+DEBUG (4): NODE 4 generating in broadcast a ROUTE_REQ msg
+DEBUG (1): NODE 1 led index: 0
+DEBUG (1): NODE 1 led STATUS: 110 
+DEBUG (1): NODE 1 receiving REQUEST msg
+DEBUG (1): NODE 1 generating in broadcast a ROUTE_REQ msg
+DEBUG (4): NODE 4 Sending packet to 65535
+DEBUG (6): NODE 6 led index: 1
+DEBUG (6): NODE 6 led STATUS: 010 
+DEBUG (6): NODE 6 receiving REQUEST msg
+DEBUG (6): NODE 6 generating in broadcast a ROUTE_REQ msg
+DEBUG (3): NODE 3 led index: 0
+DEBUG (3): NODE 3 led STATUS: 110 
+DEBUG (3): NODE 3 receiving REQUEST msg
+DEBUG (3): NODE 3 generating in broadcast a ROUTE_REQ msg
+DEBUG (2): NODE 2 led index: 0
+DEBUG (2): NODE 2 led STATUS: 110 
+DEBUG (2): NODE 2 receiving REQUEST msg
+DEBUG (2): NODE 2 generating in broadcast a ROUTE_REQ msg
+DEBUG (6): NODE 6 Sending packet to 65535
+DEBUG (7): NODE 7 led index: 1
+DEBUG (7): NODE 7 led STATUS: 010 
+DEBUG (7): NODE 7 receiving REQUEST msg
+DEBUG (7): NODE 7 generating in broadcast a ROUTE_REPLY msg
+DEBUG (5): NODE 5 led index: 1
+DEBUG (5): NODE 5 led STATUS: 010 
+DEBUG (5): NODE 5 receiving REQUEST msg
+DEBUG (5): NODE 5 generating in broadcast a ROUTE_REQ msg
+DEBUG (4): NODE 4 led index: 2
+DEBUG (4): NODE 4 led STATUS: 111 
+DEBUG (4): NODE 4 receiving REQUEST msg
+DEBUG (4): NODE 4 generating in broadcast a ROUTE_REQ msg
+DEBUG (5): NODE 5 Sending packet to 65535
+DEBUG (7): NODE 7 led index: 0
+DEBUG (7): NODE 7 led STATUS: 110 
+DEBUG (7): NODE 7 receiving REQUEST msg
+DEBUG (7): NODE 7 generating in broadcast a ROUTE_REPLY msg
+DEBUG (6): NODE 6 led index: 0
+DEBUG (6): NODE 6 led STATUS: 110 
+DEBUG (6): NODE 6 receiving REQUEST msg
+DEBUG (6): NODE 6 generating in broadcast a ROUTE_REQ msg
+DEBUG (3): NODE 3 led index: 2
+DEBUG (3): NODE 3 led STATUS: 111 
+DEBUG (3): NODE 3 receiving REQUEST msg
+DEBUG (3): NODE 3 generating in broadcast a ROUTE_REQ msg
+DEBUG (7): NODE 7 Sending packet to 65535
+DEBUG (6): NODE 6 led index: 2
+DEBUG (6): NODE 6 led STATUS: 111 
+DEBUG (6): NODE 6 receiving REPLY msg
+DEBUG (6): NODE 6 generating in broadcast a ROUTE_REPLY msg
+DEBUG (5): NODE 5 led index: 0
+DEBUG (5): NODE 5 led STATUS: 110 
+DEBUG (5): NODE 5 receiving REPLY msg
+DEBUG (5): NODE 5 generating in broadcast a ROUTE_REPLY msg
+DEBUG (5): NODE 5 Sending packet to 65535
+DEBUG (7): NODE 7 led index: 2
+DEBUG (7): NODE 7 led STATUS: 111 
+DEBUG (7): NODE 7 receiving REPLY msg
+DEBUG (6): NODE 6 led index: 2
+DEBUG (6): NODE 6 led STATUS: 110 
+DEBUG (6): NODE 6 receiving REPLY msg
+DEBUG (3): NODE 3 led index: 2
+DEBUG (3): NODE 3 led STATUS: 110 
+DEBUG (3): NODE 3 receiving REPLY msg
+DEBUG (3): NODE 3 generating in broadcast a ROUTE_REPLY msg
+DEBUG (6): NODE 6 Sending packet to 65535
+DEBUG (7): NODE 7 led index: 2
+DEBUG (7): NODE 7 led STATUS: 110 
+DEBUG (7): NODE 7 receiving REPLY msg
+DEBUG (5): NODE 5 led index: 2
+DEBUG (5): NODE 5 led STATUS: 111 
+DEBUG (5): NODE 5 receiving REPLY msg
+DEBUG (4): NODE 4 led index: 2
+DEBUG (4): NODE 4 led STATUS: 110 
+DEBUG (4): NODE 4 receiving REPLY msg
+DEBUG (4): NODE 4 generating in broadcast a ROUTE_REPLY msg
+DEBUG (3): NODE 3 Sending packet to 65535
+DEBUG (4): NODE 4 led index: 2
+DEBUG (4): NODE 4 led STATUS: 111 
+DEBUG (4): NODE 4 receiving REPLY msg
+DEBUG (5): NODE 5 led index: 2
+DEBUG (5): NODE 5 led STATUS: 110 
+DEBUG (5): NODE 5 receiving REPLY msg
+DEBUG (1): NODE 1 led index: 2
+DEBUG (1): NODE 1 led STATUS: 111 
+DEBUG (1): NODE 1 receiving REPLY msg
+DEBUG (1): NODE 1 generating in broadcast a ROUTE_REPLY msg
+DEBUG (1): NODE 1 trying to send a DATA msg to destination 7
+DEBUG (1): NODE 1 generating DATA msg to 3
+DEBUG (1): NODE 1 Sending packet to 65535
+DEBUG (3): NODE 3 led index: 2
+DEBUG (3): NODE 3 led STATUS: 111 
+DEBUG (3): NODE 3 receiving REPLY msg
+DEBUG (2): NODE 2 led index: 2
+DEBUG (2): NODE 2 led STATUS: 111 
+DEBUG (2): NODE 2 receiving REPLY msg
+DEBUG (2): NODE 2 generating in broadcast a ROUTE_REPLY msg
+DEBUG (4): NODE 4 Sending packet to 65535
+DEBUG (6): NODE 6 led index: 2
+DEBUG (6): NODE 6 led STATUS: 111 
+DEBUG (6): NODE 6 receiving REPLY msg
+DEBUG (3): NODE 3 led index: 0
+DEBUG (3): NODE 3 led STATUS: 011 
+DEBUG (3): NODE 3 receiving REPLY msg
+DEBUG (2): NODE 2 led index: 2
+DEBUG (2): NODE 2 led STATUS: 110 
+DEBUG (2): NODE 2 receiving REPLY msg
+DEBUG (2): NODE 2 generating in broadcast a ROUTE_REPLY msg
+DEBUG (2): NODE 2 Sending packet to 65535
+DEBUG (4): NODE 4 led index: 0
+DEBUG (4): NODE 4 led STATUS: 011 
+DEBUG (4): NODE 4 receiving REPLY msg
+DEBUG (1): NODE 1 led index: 2
+DEBUG (1): NODE 1 led STATUS: 110 
+DEBUG (1): NODE 1 receiving REPLY msg
+DEBUG (1): NODE 1 trying to send a DATA msg to destination 7
+DEBUG (1): NODE 1 generating DATA msg to 3
+DEBUG (1): NODE 1 Sending packet to 3
+DEBUG (3): NODE 3 led index: 2
+DEBUG (3): NODE 3 led STATUS: 010 
+DEBUG (3): NODE 3 receiving DATA msg
+DEBUG (3): NODE 3 generating DATA msg to 5
+DEBUG (3): NODE 3 Sending packet to 5
+DEBUG (5): NODE 5 led index: 2
+DEBUG (5): NODE 5 led STATUS: 111 
+DEBUG (5): NODE 5 receiving DATA msg
+DEBUG (5): NODE 5 generating DATA msg to 7
+DEBUG (5): NODE 5 Sending packet to 7
+DEBUG (7): NODE 7 led index: 2
+DEBUG (7): NODE 7 led STATUS: 111 
+DEBUG (7): NODE 7 receiving DATA msg
+
+
+
+Simulation finished!
